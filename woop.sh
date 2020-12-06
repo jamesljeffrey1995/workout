@@ -1,1 +1,1 @@
-echo "henlo"
+python3 main.py
