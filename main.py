@@ -27,7 +27,7 @@ weeks = []
 exerciseWeek = []
 exersises = []
 noWeek = {}
-wb = openpyxl.load_workbook('workouts.xlsx')
+wb = openpyxl.load_workbook('Workouts.xlsx')
 sheet = wb.get_sheet_by_name('Sheet1')
 main_exercises = [sheet['A1'].value, sheet['B1'].value,sheet['C1'].value,sheet['D1'].value]
 bi_exercises = [sheet['E1'].value, sheet['F1'].value]
@@ -56,7 +56,7 @@ for Col in sheet['F2':'F8']:
     for objects in Col:
         fullBody.append(objects.value)
 
-for i in range(12):
+for i in range(4):
     exerciseWeek = []
     weeks = []
     if i % 2 == 0:
@@ -121,6 +121,7 @@ for week in range(len(noWeek)):
 
 workbook.close()
 
+"""
 subject = "Workout Routine for 12 Weeks"
 body = "Your fucking eamil dipshit for working out"
 sender_email = "jamesljeffrey1995@gmail.com"
@@ -164,3 +165,5 @@ context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
     server.login(sender_email, password)
     server.sendmail(sender_email, receiver_email, text)
+
+"""
