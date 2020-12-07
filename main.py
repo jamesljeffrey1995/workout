@@ -123,7 +123,7 @@ for week in range(len(noWeek)):
 workbook.close()
 
 subject = "Workout Routine for 12 Weeks"
-body = "Your fucking eamil dipshit for working out"
+body = "Workout Routine dated") + x.strftime("%d-%b-%Y")
 sender_email = "pythonjenkinsworkout@gmail.com"
 receiver_email = "jamesljeffrey1995@gmail.com"
 password = os.environ['EMAIL_PASS']
