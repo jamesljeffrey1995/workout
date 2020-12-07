@@ -11,6 +11,7 @@ from random import sample
 
 import openpyxl
 import xlsxwriter
+import os
 
 x = datetime.datetime.now()
 
@@ -125,7 +126,7 @@ subject = "Workout Routine for 12 Weeks"
 body = "Your fucking eamil dipshit for working out"
 sender_email = "pythonjenkins@gmail.com"
 receiver_email = "jamesljeffrey1995@gmail.com"
-password = ${EMAIL_PASS}
+password = os.environ['EMAIL_PASS']
 
 # Create a multipart message and set headers
 message = MIMEMultipart()
